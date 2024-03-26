@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "feedback-58b40",
+    "dev": "feedback-58b40",
+    "prod": "feedback-58b40"
+  }
+}

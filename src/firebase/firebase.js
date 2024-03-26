@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFunctions, connectFunctionsEmulator } from "firebase/functions";
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -21,5 +22,10 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app)
+
+if(process.env.NODE_ENV === 'development'){
+  const functions = getFunctions(app);
+  connectFunctionsEmulator(getFunctions(app),"localhost", 5001);
+}
 
 export {app, auth};

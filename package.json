@@ -7,6 +7,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.16",
+    "express": "^4.19.2",
     "firebase": "^10.9.0",
     "firebase-tools": "^13.5.2",
     "postcss": "^8.4.33",
@@ -21,7 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "firebase:emulate": "firebase use default && firebase emulators:start"
   },
   "eslintConfig": {
     "extends": [
